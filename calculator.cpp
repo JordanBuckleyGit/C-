@@ -21,6 +21,31 @@ int modulus(int a, int b) {
     return a % b;
 }
 
+// Advanced operations
+double power(double base, double exp) {
+    return std::pow(base, exp);
+}
+
+double squareRoot(double num) {
+    if (num < 0) {
+        std::cerr << "Error: Cannot take square root of negative number." << std::endl;
+        return std::numeric_limits<double>::quiet_NaN(); 
+    }
+    return std::sqrt(num);
+}
+
+int factorial(int n) {
+    if (n < 0) {
+        std::cerr << "Error: Factorial of negative number is undefined." << std::endl;
+        return -1;
+    }
+    int result = 1;
+    for (int i = 1; i <= n; ++i) {
+        result *= i;
+    }
+    return result;
+}
+
 void menu() {
     int num1, num2, result;
     char operation;
